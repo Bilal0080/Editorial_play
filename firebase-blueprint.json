@@ -1,0 +1,41 @@
+{
+  "entities": {
+    "stories": {
+      "title": "Story",
+      "description": "A generated or user-created story.",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "title": { "type": "string" },
+        "description": { "type": "string" },
+        "imageUrl": { "type": "string" },
+        "category": { "type": "string" },
+        "authorId": { "type": "string" },
+        "createdAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["id", "title", "description", "imageUrl", "authorId", "createdAt"]
+    },
+    "users": {
+      "title": "User",
+      "description": "User profile information.",
+      "type": "object",
+      "properties": {
+        "uid": { "type": "string" },
+        "email": { "type": "string" },
+        "displayName": { "type": "string" },
+        "photoURL": { "type": "string" }
+      },
+      "required": ["uid", "email"]
+    }
+  },
+  "firestore": {
+    "/stories/{storyId}": {
+      "schema": "stories",
+      "description": "Collection of all stories."
+    },
+    "/users/{userId}": {
+      "schema": "users",
+      "description": "User profile documents."
+    }
+  }
+}

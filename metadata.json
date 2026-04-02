@@ -1,0 +1,5 @@
+{
+  "name": "Editorial Play",
+  "description": "A magical story builder where dreams come to life through AI.",
+  "requestFramePermissions": ["microphone"]
+}
